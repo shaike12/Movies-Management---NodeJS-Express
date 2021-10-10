@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create New Movie</title>
+  </head>
+  <body>
+    <form action="/add_movie/create" method="POST">
+      <h2>Create New Movie</h2>
+
+      <label for="name">Movie Name:</label>
+      <input type="text" name="name" />
+      <br />
+
+      <label for="language">Languages:</label>
+      <select name="language">
+        <option value="Hebrew">Hebrew</option>
+        <option value="English">English</option>
+        <option value="Franch">Franch</option>
+        <option value="German">German</option>
+        <option value="Spanish">Spanish</option>
+      </select>
+      <br />
+
+      <label for="ganres">Ganres:</label>
+      <select name="genres">
+        <option value="Comedy">Comedy</option>
+        <option value="Horror">Horror</option>
+        <option value="Action">Action</option>
+        <option value="Drama">Drama</option>
+        <option value="Crime">Crime</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Adventure">Adventure</option>
+      </select>
+      <br />
+
+      <input type="submit" value="Add" />
+      <input type="button" value="Back" onclick="history.back(-1)" />
+    </form>
+  </body>
+</html>

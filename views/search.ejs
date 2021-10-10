@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/search.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/search/results" method="POST">
+      <h2>Search</h2>
+      <label for="name">Movie Name:</label>
+      <input type="text" name="name" />
+      <br />
+      <label for="language">Language</label>
+      <select name="language">
+        <option value="Hebrew">Hebrew</option>
+        <option value="English">English</option>
+        <option value="Franch">Franch</option>
+        <option value="German">German</option>
+        <option value="Spanish">Spanish</option>
+      </select>
+      <br />
+
+      <label for="ganres">Ganres:</label>
+      <select name="genres">
+        <option value="Comedy">Comedy</option>
+        <option value="Horror">Horror</option>
+        <option value="Action">Action</option>
+        <option value="Drama">Drama</option>
+        <option value="Crime">Crime</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Adventure">Adventure</option>
+      </select>
+      <br />
+
+      <input type="submit" value="Search" />
+      <input type="button" value="Back" onclick="history.back(-1)" />
+    </form>
+  </body>
+</html>

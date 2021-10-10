@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= user ? "Edit User" : "Add User" %></title>
+  </head>
+  <body>
+    <form
+      method="post"
+      action="<%= user ? `/users_management/edit/${user.id}` : '/users_management/edit' %>"
+    >
+      <h2><%= user ? "Edit User" : "Add User" %></h2>
+      <label for="username">Username: </label>
+      <input
+        type="text"
+        name="Username"
+        value="<%=user ? user.Username : ''%>"
+      /><br />
+      <label for="Password">Password: </label>
+      <input type="text" name="Password" /><br />
+      <label for="NumOfTransactions">Num Of Transactions: </label>
+      <input
+        type="text"
+        name="NumOfTransactions"
+        value="<%=user ? user.NumOfTransactions : ''%>"
+      /><br />
+      <input type="submit" value="<%= user ? 'Edit' : 'Save' %>" />
+      <input type="button" value="Back" onclick="history.back(-1)" />
+    </form>
+  </body>
+</html>
